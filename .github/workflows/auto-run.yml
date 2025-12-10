@@ -17,7 +17,7 @@ jobs:
         run: pip install requests
 
       - name: Run Python script
-        run: python script.py
+        run: python .github/workflows/Request.py
 
       - name: Upload output file (Artifact v4)
         uses: actions/upload-artifact@v4
