@@ -1,0 +1,17 @@
+name: Auto Python Runner
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"   # هر 3 ساعت اجرا میشه
+  workflow_dispatch:        # اجرای دستی
+
+jobs:
+  run_python:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run Python script
+        run: python Request.py
