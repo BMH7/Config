@@ -2,7 +2,7 @@ name: Run Python Script
 
 on:
   schedule:
-    - cron: "0 */3 * * *"   # هر 3 ساعت
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
