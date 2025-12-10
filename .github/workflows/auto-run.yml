@@ -1,17 +1,26 @@
-name: Auto Python Runner
+name: Run Python Script
 
 on:
   schedule:
- #   - cron: "0 */3 * * *"   # هر 3 ساعت اجرا میشه
-  workflow_dispatch:        # اجرای دستی
+    - cron: "0 */3 * * *"   # هر 3 ساعت
+  workflow_dispatch:        # اجرا دستی
 
 jobs:
-  run_python:
+  run-python:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Install Python Requirements
+        run: pip install requests
+
       - name: Run Python script
-        run: python .github/workflows/Request.py
+        run: python script.py
+
+      - name: Upload output file as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: modified-output
+          path: output.html
