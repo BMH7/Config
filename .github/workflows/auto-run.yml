@@ -2,7 +2,7 @@ name: Auto Python Runner
 
 on:
   schedule:
-    - cron: "0 */3 * * *"   # هر 3 ساعت اجرا میشه
+ #   - cron: "0 */3 * * *"   # هر 3 ساعت اجرا میشه
   workflow_dispatch:        # اجرای دستی
 
 jobs:
