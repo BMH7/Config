@@ -3,7 +3,7 @@ name: Run Python Script
 on:
   schedule:
     - cron: "0 */3 * * *"   # هر 3 ساعت
-  workflow_dispatch:        # اجرا دستی
+  workflow_dispatch:
 
 jobs:
   run-python:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Python Requirements
         run: pip install requests
@@ -19,8 +19,8 @@ jobs:
       - name: Run Python script
         run: python script.py
 
-      - name: Upload output file as artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload output file (Artifact v4)
+        uses: actions/upload-artifact@v4
         with:
           name: modified-output
           path: output.html
