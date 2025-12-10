@@ -21,7 +21,7 @@ jobs:
 
       - name: Run script and save as index.html
         run: |
-          python .github/workflows/Request.py
+          python Request.py
           mv output.html index.html  # تغییر نام فایل خروجی به index.html
 
       - name: Commit index.html if changed
