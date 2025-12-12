@@ -17,7 +17,7 @@ with open("input.txt", "w", encoding="utf-8") as f:
 
 modified_html = html_content.replace(
     '<a href="https://t.me/mahsa_net">\n                MahsaNet\n                </a>',
-    '<a href="https://t.me/BridgeTest">\n                Bridge Services !\n                </a>'
+    '<a href="https://t.me/BridgeTestChannel">\n                Bridge Services Support !\n                </a>'
 )
 
 
@@ -25,3 +25,4 @@ with open("output.html", "w", encoding="utf-8") as f:
     f.write(modified_html)
 
 print("File downloaded, modified, and saved as output.html")
+
